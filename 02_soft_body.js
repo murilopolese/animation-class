@@ -131,8 +131,8 @@ function mouseClicked() {
 	bgColor = color(random(255), random(255), random(255), random(150, 255))
 	let b = new Body(mouseX, mouseY)
 	b.octave = parseInt(
-		random(3, 6)
-		// (bodies.length % 4) + 3
+		// random(3, 6)
+		(bodies.length % 4) + 3
 	)
 	bodies.push( b )
 }
