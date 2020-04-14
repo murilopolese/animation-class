@@ -20,7 +20,7 @@ function Ball(x, y, size) {
 	this.size = size || 10
 	this.sprite = 0
 	this.face = 0
-	this.mood = random(['happy', 'scared'])
+	this.mood = random(['happy', 'happy', 'happy', 'scared'])
 	let c = parseInt(random(palette.length))
 	if (c === randomBgColor) {
 		c = (c+4) % palette.length
@@ -159,7 +159,7 @@ function draw() {
 	rectMode(CENTER)
 	rect(
 		ground.position.x, ground.position.y,
-		width, 180
+		width, 150
 	)
 }
 
