@@ -13,7 +13,7 @@ let palette = [
 	'#52b6de', // regular blue
 	'#828dab', // light gray
 	'#6e778f', // dark grey
-	'#4b5161' // black
+	// '#4b5161' // black
 ]
 
 function Ball(x, y, size) {
@@ -146,7 +146,7 @@ function setup() {
 	randomGroundColor = (randomColor+6) % palette.length
 
 	// Add bouncing ball
-	const body = new Ball(width/2, height/6, 120)
+	const body = new Ball(width/2, height/6, random(60, 100))
 	body.color = palette[randomColor]
 	bodies.push(body)
 }
@@ -164,7 +164,7 @@ function draw() {
 }
 
 function mouseClicked() {
-	bodies.push(new Ball(mouseX, mouseY, random(60, 140)))
+	bodies.push(new Ball(mouseX, mouseY, random(60, 100)))
 }
 
 function windowResized() {
