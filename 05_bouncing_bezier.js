@@ -62,9 +62,13 @@ function draw() {
 	fill(0)
 	push()
 	let eyeSize = shape.x/10
-	facePos.y = lerp(
-		facePos.y, ballPos.y+shape.y/16, 0.4
+	let newFacePos = facePos.copy()
+	newFacePos.y = lerp(
+		facePos.y, ballPos.y, 0.15
 	)
+	let d = p5.Vector.sub(newFacePos, ballPos)
+	d.limit(50)
+	facePos.y = ballPos.y + d.y
 	ellipse( // Left eye
 		width/2 - (shape.x/10),
 		facePos.y - (shape.x/6),
