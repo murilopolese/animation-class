@@ -40,7 +40,7 @@ function draw() {
 			0, height,
 			100, height-80
 		),
-		0, height-150
+		0, height-130
 	)
 
 	// BALL
@@ -55,7 +55,7 @@ function draw() {
 		,
 		shape.y
 		+ map(abs(v), 0, height*2, 0, shape.y*0.2)
-		- map(max(phase, 0.9), 0.9, 1, 0, shape.y*0.8)
+		- map(max(phase, 0.9), 0.9, 1, 0, shape.y*0.4)
 	)
 	// FACE
 	stroke(0)
