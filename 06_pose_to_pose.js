@@ -84,6 +84,7 @@ function Timeline(size) {
 }
 
 let ball, positionTimeline, widthTimeline, heightTimeline
+let animationLength = 60
 
 function setup() {
 	createCanvas(800, 600)
@@ -94,10 +95,14 @@ function setup() {
 		color: '#e85d4a'
 	})
 
-	positionTimeline = new Timeline(60)
+	positionTimeline = new Timeline(animationLength)
 	positionTimeline.addKeyFrame(
 		0, new KeyFrame({
-			value: height
+			value: height,
+			handles: [
+				createVector(0, -10),
+				createVector(0, 0)
+			]
 		})
 	)
 	positionTimeline.addKeyFrame(
@@ -105,7 +110,7 @@ function setup() {
 			value: 0,
 			handles: [
 				createVector(0, 0),
-				createVector(0, height*0.6)
+				createVector(0, height*0.8)
 			]
 		})
 	)
@@ -113,18 +118,22 @@ function setup() {
 		31, new KeyFrame({
 			value: 0,
 			handles: [
-				createVector(0, height*0.7),
+				createVector(0, height*0.8),
 				createVector(0, 0)
 			]
 		})
 	)
 	positionTimeline.addKeyFrame(
 		59, new KeyFrame({
-			value: height
+			value: height,
+			handles: [
+				createVector(0, -10),
+				createVector(0, 0)
+			]
 		})
 	)
 
-	widthTimeline = new Timeline(60)
+	widthTimeline = new Timeline(animationLength)
 	widthTimeline.addKeyFrame(
 		0, new KeyFrame({
 			value: 100
@@ -141,7 +150,7 @@ function setup() {
 	)
 	widthTimeline.addKeyFrame(
 		30, new KeyFrame({
-			value: 120
+			value: 150
 		})
 	)
 	widthTimeline.addKeyFrame(
@@ -159,7 +168,7 @@ function setup() {
 		})
 	)
 
-	heightTimeline = new Timeline(60)
+	heightTimeline = new Timeline(animationLength)
 	heightTimeline.addKeyFrame(
 		0, new KeyFrame({
 			value: 100
@@ -201,7 +210,7 @@ function draw() {
 	scale(1, -1)
 	translate(0, -height)
 
-	let frame = floor(frameCount) % 60
+	let frame = floor(frameCount) % animationLength
 
 	let y = positionTimeline.getValue(frame)
 	ball.pos.y = map(y, 0, height, 100, height-100)
