@@ -39,5 +39,5 @@ Here are a few software I am using:
 
 - [Synfig Studio Development Snapshot](https://www.synfig.org/) (FOSS)
 - [TIC80](https://tic.computer/) (FOSS)
-- [Piskel](https://www.piskelapp.com/)
+- [Piskel](https://www.piskelapp.com/) (Browser)
 - [Loom](https://apps.apple.com/us/app/looom/id1454153126) (iPad)
