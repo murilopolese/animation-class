@@ -30,3 +30,14 @@ Think of it as an array of frames slots and you can place "keyframes" on them. T
 I'm creating one "timeline" for each value I want to animate and this gives the same power as if I was working with an animation software. The "timeline" can be used both for "value graphs" as well as "velocity graphs".
 
 [Here's an example of a bouncing ball using beziers and "timelines"](https://editor.p5js.org/murilopolese/sketches/HzmXwntk2)
+
+## Using/Translating from other animation software
+
+With beziers and timelines I basically have all the tools necessary to implement animations and add interactivity to them but to design and experiment with the 12 principles of animation I'm using a range of different software, preferably Free and Open Source Software but not only.
+
+Here are a few software I am using:
+
+- [Synfig Studio Development Snapshot](https://www.synfig.org/) (FOSS)
+- [TIC80](https://tic.computer/) (FOSS)
+- [Piskel](https://www.piskelapp.com/)
+- [Loom](https://apps.apple.com/us/app/looom/id1454153126) (iPad)
